@@ -1,0 +1,4 @@
+#!/bin/bash
+#
+# receive encoded m17 audio, demodulate and play the audio out the speaker
+netcat -l localhost 3000 | ./m17-demod | play -b 16 -r 8000 -c1 -t s16 -

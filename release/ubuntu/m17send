@@ -1,0 +1,6 @@
+#!/bin/bash
+#
+# send uncoded wave file to m17 modulator to netcat.
+# netcat -N terminates on EOF otherwise netcat keeps running.
+#
+cat ../../recordings/count-to-ten-8k.wav | ./m17-mod -S NOCALL | netcat -N localhost 3000
